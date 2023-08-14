@@ -1,13 +1,13 @@
 import axios from 'axios';
 export default class pixabayAPI {
   BASE_URL = 'https://pixabay.com/api/';
-  KEY = '38813768-e622c26a05e1632f84811751b';
+  API_KEY = '38813768-e622c26a05e1632f84811751b';
   searchTerm = null;
   page = 1;
 
   async fetchImg() {
     const searchParams = new URLSearchParams({
-      key: this.KEY,
+      key: this.API_KEY,
       q: `${this.searchTerm}`,
       image_type: 'photo',
       orientation: 'horizontal',
